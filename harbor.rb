@@ -5,20 +5,20 @@
 class Harbor < Formula
   desc ""
   homepage "https://github.com/harbor-xyz/harbor-cli"
-  version "0.2.9"
+  version "0.2.10"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.9/harbor-cli_0.2.9_darwin_arm64.tar.gz"
-      sha256 "77088d159fb79539ce623d3cd297f5651a0531520949fdb1dac935bbf03bd50e"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.10/harbor-cli_0.2.10_darwin_arm64.tar.gz"
+      sha256 "b37ba9e7a34e53736f2d60b2c3024e9736aae5db3a08b57f6f86751f5495a008"
 
       def install
         bin.install "harbor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.9/harbor-cli_0.2.9_darwin_amd64.tar.gz"
-      sha256 "048587adc60c7c9fe0fa3682b1369bb54baace4d8894bb81b262288f0767e773"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.10/harbor-cli_0.2.10_darwin_amd64.tar.gz"
+      sha256 "1c07cbb3d0efcb711d3563581b4db69b03af88099cb2a72e0662f24aa09dde89"
 
       def install
         bin.install "harbor"
@@ -28,16 +28,16 @@ class Harbor < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.9/harbor-cli_0.2.9_linux_arm64.tar.gz"
-      sha256 "f2cc5ab6daeb1264d5eebebf5da5345ca5ab736b9e729f6b771bfba28d3a51a5"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.10/harbor-cli_0.2.10_linux_arm64.tar.gz"
+      sha256 "34ef29870b25a222f141297f9e4ad8fa462f62a9539c4de69d0cdea4b24c67f0"
 
       def install
         bin.install "harbor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.9/harbor-cli_0.2.9_linux_amd64.tar.gz"
-      sha256 "39d89953860fa1199d6d1b4b5285e11a8a61842eff5f53c9a43d76af8687bf90"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.10/harbor-cli_0.2.10_linux_amd64.tar.gz"
+      sha256 "b1e01f8cc2feadacb1576dcfa43b99796e622c60c7a10ddfe9b31ed172cfcde6"
 
       def install
         bin.install "harbor"
