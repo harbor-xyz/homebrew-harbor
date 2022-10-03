@@ -5,46 +5,42 @@
 class Harbor < Formula
   desc ""
   homepage "https://github.com/harbor-xyz/harbor-cli"
-  version "0.2.7"
+  version "0.2.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.7/harbor-cli_0.2.7_darwin_arm64.tar.gz"
-      sha256 "4aa822115354c0c1069567a18b5708de0b00f15cad0f3653310d3790d72b70ab"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.8/harbor-cli_0.2.8_darwin_arm64.tar.gz"
+      sha256 "3151f010f1de709178bfb96927a94ea0d1b0f054fc29354a01a2a3fd8418063c"
 
       def install
         bin.install "harbor"
-        etc.install "harbor/.env"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.7/harbor-cli_0.2.7_darwin_amd64.tar.gz"
-      sha256 "50e8c22647d87e33cade586b7f0491f9b883d933c836003ea70e72d223850b52"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.8/harbor-cli_0.2.8_darwin_amd64.tar.gz"
+      sha256 "95a2a409fda980be3869e115186e9d3792ec402307af5e4c97fc5649f07bbf99"
 
       def install
         bin.install "harbor"
-        etc.install "harbor/.env"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.7/harbor-cli_0.2.7_linux_arm64.tar.gz"
-      sha256 "f5e424ce4a38b61cc8d7862fb4557b41ad7a5da8da1c6dcccdd911092580a590"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.8/harbor-cli_0.2.8_linux_arm64.tar.gz"
+      sha256 "90441f0758db2c28b9651600e88c620aed0e71f4bb71096226759dc2efe11fbe"
 
       def install
         bin.install "harbor"
-        etc.install "harbor/.env"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.7/harbor-cli_0.2.7_linux_amd64.tar.gz"
-      sha256 "8305ac824fc202db086229d977421075e91f8c05a44360300c3e5466c02fe0b7"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.8/harbor-cli_0.2.8_linux_amd64.tar.gz"
+      sha256 "ada6e6541b930b32462642f4d6a5833e034d0e9973af57721641850dc81365bc"
 
       def install
         bin.install "harbor"
-        etc.install "harbor/.env"
       end
     end
   end
