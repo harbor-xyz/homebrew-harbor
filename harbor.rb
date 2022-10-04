@@ -5,20 +5,20 @@
 class Harbor < Formula
   desc ""
   homepage "https://github.com/harbor-xyz/harbor-cli"
-  version "0.2.11"
+  version "0.2.12"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.11/harbor-cli_0.2.11_darwin_arm64.tar.gz"
-      sha256 "32721b548466e3ce17ad0188811c6dc62a3f550a561aa323e5ca5c4db52eb8d1"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.12/harbor-cli_0.2.12_darwin_arm64.tar.gz"
+      sha256 "b8a8c2bb792668ecd9d57774d021a7470aa4dbfa566cf3a8f88c6af9b5ea8419"
 
       def install
         bin.install "harbor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.11/harbor-cli_0.2.11_darwin_amd64.tar.gz"
-      sha256 "4cde595fa2495f809856f25fb1f99b2f74d952c819f9286f811ebb6b488f86c3"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.12/harbor-cli_0.2.12_darwin_amd64.tar.gz"
+      sha256 "3df943c1ce72936d1fe0184533a2819d91e25be5d7ae2db0132661686d216e1f"
 
       def install
         bin.install "harbor"
@@ -28,16 +28,16 @@ class Harbor < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.11/harbor-cli_0.2.11_linux_arm64.tar.gz"
-      sha256 "2abc809a724796b1635e33619a8eed0a0584c295c7e56adafdbc2f0eff478b3b"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.12/harbor-cli_0.2.12_linux_arm64.tar.gz"
+      sha256 "0f6262298f9e1c831c86525e5de162cbc311d947d1e2d3dc78cd6ec0d5fdc6f6"
 
       def install
         bin.install "harbor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.11/harbor-cli_0.2.11_linux_amd64.tar.gz"
-      sha256 "69872e623ae0b25263ef0f68c8d5b04deb4e0dfbe23561113e71aeaf448c2e33"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.2.12/harbor-cli_0.2.12_linux_amd64.tar.gz"
+      sha256 "acbbeef35ee537c0eabcfaf9c012eee00ee9147b4d529ac92aaa1625c4b40795"
 
       def install
         bin.install "harbor"
