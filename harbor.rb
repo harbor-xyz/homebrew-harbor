@@ -5,20 +5,20 @@
 class Harbor < Formula
   desc ""
   homepage "https://github.com/harbor-xyz/harbor-cli"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.5.0/harbor-cli_0.5.0_darwin_arm64.tar.gz"
-      sha256 "c465d72e3922fa91b9ff5086d4a4e04ab0eb81e01747ca776b14e06efd08ac9c"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.5.1/harbor-cli_0.5.1_darwin_arm64.tar.gz"
+      sha256 "d409710fa37c4fcfe8456efb649eabadde8942e5457c9c154cd0187e90af6306"
 
       def install
         bin.install "harbor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.5.0/harbor-cli_0.5.0_darwin_amd64.tar.gz"
-      sha256 "223c1aaa48d4cea36ddea2eb511bc7056f23e23fb77f1b43606c0a6a9c734531"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.5.1/harbor-cli_0.5.1_darwin_amd64.tar.gz"
+      sha256 "12a0e594af2a22d560be87a6befbb891602d519a8626776729839707ab7e005b"
 
       def install
         bin.install "harbor"
@@ -28,16 +28,16 @@ class Harbor < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.5.0/harbor-cli_0.5.0_linux_arm64.tar.gz"
-      sha256 "500be7806f532a625484cdadf9869e25b1b9c936f37c54528ea8443a7f409eb9"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.5.1/harbor-cli_0.5.1_linux_arm64.tar.gz"
+      sha256 "12825c6fb8b6897f273f9176cb2b19bc415079af331fc6cd55c8e2f68418d74e"
 
       def install
         bin.install "harbor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.5.0/harbor-cli_0.5.0_linux_amd64.tar.gz"
-      sha256 "2619413e05e9477f02f8287016c4eaa235f50b6a989b65bb3741a8ddc5bd9609"
+      url "https://github.com/harbor-xyz/harbor-cli/releases/download/v0.5.1/harbor-cli_0.5.1_linux_amd64.tar.gz"
+      sha256 "9edc7c5ef35c5f35a2174b2ed00236603ff248f9afbdeff5ce189b286163cbe9"
 
       def install
         bin.install "harbor"
@@ -47,12 +47,12 @@ class Harbor < Formula
 
   def caveats
     <<~EOS
-      🙂 Congratulation on installation of the harbor cli.
-      🗲 Start with the command `harbor apply <testnet-name> --config <path/to/config/file>` to quickly get started.
-      🛈 To see advanced option and detailed documentation, visit https://docs.goharbor.com/docs/installation
+      ✔ Congratulations on installation of the Harbor CLI.
 
-      🗧 You can optionally run command `harbor completion bash > /etc/bash_completion.d/harbor_completion` to enable auto-complete for future. You will need to select appropriate prompt and should have required permissions.
-      🖒 Feel free to drop a note to share any issues / concerns / suggestion at hello@goharbor.xyz
+      - Get started: Start with the command "harbor apply --config <path/to/config/file> <testnet-name>" to quickly get started.
+      - Documentation: To see advanced option and detailed documentation, visit https://docs.goharbor.com/docs/installation
+      - Auto-complete CLI: You can optionally run command "harbor completion bash > /etc/bash_completion.d/harbor_completion" to enable auto-complete on Harbor CLI.
+      - Contact us: Feel free to drop a note to share any issues / concerns / suggestion at hello@goharbor.xyz
     EOS
   end
 end
